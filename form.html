@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        input{
+            border:2px solid black;
+        }
+        input{
+            border-color: none;
+        }
+
+        input:focus:valid{
+            border-color: green;
+
+        }
+        input:invalid{
+            border-color: red;
+            outline: none;
+        }
+    </style>
+
+    
+    <p>Choose your favorite Web language:</p>
+
+    <form action="/action_page.php" name="myForm" >
+  <input type="radio" name="gender" id="male">
+  <label for="male">male</label><br>
+  <input type="radio" name="gender" id="female">
+  <label for="female">female</label>
+<br>
+  <p >Conditions:</p><br>
+  <input type="checkbox" name="bike" id="bike">
+  <label for="bike">I have a bike</label>
+  <br>
+  <input type="checkbox" name="car" id="car">
+  <label for="car">I have a car</label>
+    <label for="fname" >First name:</label><br>
+    <input type="text" id="fname" name="fname"  ><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+    <input type="submit" value="Submit">
+  
+</form>
+</body>
+<script>
+    
+    function valdiate(){
+        let form=document.forms["myForm"];
+        // let fname=form.elements["fname"];
+
+        // console.log(form)
+        for(i in form){
+            let elem = form.elements[i]
+            // if(elem.value==""){
+            //     console.log(elem)
+            // }
+            console.log(elem)
+        }
+
+
+    //     if(fname.value=="")
+    // {
+    //     // alert("Please enter your first name");
+    //     document.getElementById("fname").style.borderColor="red"
+
+    // }
+    // else{
+    //     document.getElementById("fname").style.borderColor="black"
+    // }
+        
+        
+    }
+    
+</script>
+
+
+
+
+</html>

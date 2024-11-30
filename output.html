@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="" oninput="validation(), x.value=parseInt(a.value)+parseInt(b.value)">
+        0<input type="range" name="a" id="a" value="50">100 +
+        <input type="number" name="b" value="50">
+        <br>
+        <input type="search" name="fname" value="" required onpaste="alert('not allowed');this.value=''"><br>
+        <span id="efname" style="display: none;"oncopy="alert('not allowed')" >please enter name</span>
+
+        <output id="x" name="x" readonly></output>
+
+    </form>
+    <script>
+        function validation(){
+            let name=document.forms["myForm"]["fname"].value;
+            let msg=document.getElementById("efname")
+            if(name=="")
+        {
+            msg.style.display="block"
+            // document.body.style.backgroundColor="red"
+        }
+        else{
+            msg.style.display="none"
+        }
+        }
+    </script>
+</body>
+</html>
